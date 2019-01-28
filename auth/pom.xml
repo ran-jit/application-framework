@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>application</groupId>
+            <groupId>application-framework</groupId>
             <artifactId>web</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
