@@ -1,17 +1,15 @@
 package web.exception;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import web.status.StatusCode;
 
 @Getter
+@AllArgsConstructor
 public class AuthenticationException extends Exception {
     private static final long serialVersionUID = -561004719041254691L;
 
     private final StatusCode statusCode;
-
-    public AuthenticationException(StatusCode statusCode) {
-        this.statusCode = statusCode;
-    }
 
     public interface AuthenticationFailiureStatus {
         StatusCode USER_NOT_EXISTS = StatusCode.builder().code("A-1011").build();
