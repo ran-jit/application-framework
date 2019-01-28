@@ -1,5 +1,8 @@
 package cache.exception;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public class CacheException extends Exception {
     private static final long serialVersionUID = -4204987455483426266L;
 

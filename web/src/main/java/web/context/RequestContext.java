@@ -2,6 +2,9 @@ package web.context;
 
 import web.request.RequestInfo;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public class RequestContext {
     private static final ThreadLocal<RequestInfo> REQUEST_CONTEXT = new ThreadLocal<>();
 

@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public abstract class AbstractDAO<E extends Serializable> {
 
     protected final Session session;
@@ -52,5 +55,4 @@ public abstract class AbstractDAO<E extends Serializable> {
     protected void delete(@NonNull E reference) {
         this.session.delete(reference);
     }
-
 }

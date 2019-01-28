@@ -11,6 +11,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public class RequestFilter implements Filter {
 
     private static final String SERVER_REQUEST_ID = "X-Request-ID";
@@ -30,11 +33,9 @@ public class RequestFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-
     }
 
     @Override
     public void destroy() {
-
     }
 }

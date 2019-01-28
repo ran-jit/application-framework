@@ -7,13 +7,15 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Builder
 @ToString
 @EqualsAndHashCode(of = {"alias"})
 public class DatabaseConfig implements Serializable {
-
-    public static final String DEFAULT_ALIAS = "defaultInstance";
+    public static final String DEFAULT_ALIAS = "default";
     private static final long serialVersionUID = -9204925166261863791L;
 
     @Builder.Default
@@ -23,5 +25,4 @@ public class DatabaseConfig implements Serializable {
     private String username;
     private String password;
     private Boolean showSQL;
-
 }

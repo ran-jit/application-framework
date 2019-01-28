@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public class MessagePublishHandler<T extends Serializable> extends MessageHandler {
 
     public MessagePublishHandler(MessageClientConfig clientConfig) {
@@ -23,5 +26,4 @@ public class MessagePublishHandler<T extends Serializable> extends MessageHandle
             channel.basicPublish(EXCHANGE_NAME, queue, null, OBJECT_MAPPER.writeValueAsBytes(data));
         }
     }
-
 }

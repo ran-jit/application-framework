@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import web.status.StatusCode;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @AllArgsConstructor
 public class AuthenticationException extends Exception {

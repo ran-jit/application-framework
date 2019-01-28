@@ -9,6 +9,9 @@ import redis.clients.jedis.HostAndPort;
 import java.io.Serializable;
 import java.util.stream.Collectors;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Builder
 @ToString
@@ -92,5 +95,4 @@ public class CacheConfig implements Serializable {
                 return new HostAndPort(hostAndPort[0], Integer.valueOf(hostAndPort[1]));
         }
     }
-
 }

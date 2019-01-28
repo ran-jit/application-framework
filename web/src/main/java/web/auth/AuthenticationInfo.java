@@ -6,6 +6,9 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Builder
 @ToString

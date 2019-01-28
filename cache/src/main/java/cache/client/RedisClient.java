@@ -10,9 +10,13 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public abstract class RedisClient {
 
     static Logger LOGGER = Logger.getLogger(RedisClient.class.getName());
@@ -57,16 +61,15 @@ public abstract class RedisClient {
         }
     }
 
-    public abstract <K> K execute(RedisCommand<K> command) throws CacheException;
+    public abstract <K extends Serializable> K execute(RedisCommand<K> command) throws CacheException;
 
     public abstract void executeAsync(RedisCommand command);
 
-    public abstract <K> K execute(RedisClusterCommand<K> clusterCommand) throws CacheException;
+    public abstract <K extends Serializable> K execute(RedisClusterCommand<K> clusterCommand) throws CacheException;
 
     public abstract void executeAsync(RedisClusterCommand clusterCommand);
 
-    public abstract <K> K execute(RedisCommand<K> command, RedisClusterCommand<K> clusterCommand) throws CacheException;
+    public abstract <K extends Serializable> K execute(RedisCommand<K> command, RedisClusterCommand<K> clusterCommand) throws CacheException;
 
     public abstract void executeAsync(RedisCommand command, RedisClusterCommand clusterCommand);
-
 }

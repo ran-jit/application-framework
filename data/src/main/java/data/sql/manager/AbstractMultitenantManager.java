@@ -7,6 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public abstract class AbstractMultitenantManager extends DatabaseManager {
 
     protected final String tenantAlias;
@@ -39,5 +42,4 @@ public abstract class AbstractMultitenantManager extends DatabaseManager {
             session.close();
         }
     }
-
 }

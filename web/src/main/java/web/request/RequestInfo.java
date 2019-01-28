@@ -6,6 +6,9 @@ import lombok.Setter;
 import lombok.ToString;
 import web.auth.AuthenticationInfo;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Setter
 @Builder

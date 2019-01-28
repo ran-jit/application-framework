@@ -6,6 +6,9 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Builder
 @ToString
@@ -19,5 +22,4 @@ public class MessageClientConfig implements Serializable {
     private String password;
     @Builder.Default
     private Integer connectionTimeout = 3000;
-
 }

@@ -3,6 +3,9 @@ package data.sql.commons;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Preconditions {
 
@@ -20,5 +23,4 @@ public class Preconditions {
         }
         return value;
     }
-
 }

@@ -12,6 +12,9 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public abstract class MessageConsumeHandler<T> extends MessageHandler {
 
     protected final String queue;
@@ -51,5 +54,4 @@ public abstract class MessageConsumeHandler<T> extends MessageHandler {
     }
 
     protected abstract void consume(T data);
-
 }

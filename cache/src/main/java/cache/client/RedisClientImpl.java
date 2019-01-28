@@ -13,10 +13,14 @@ import redis.clients.jedis.Protocol;
 import redis.clients.jedis.exceptions.JedisException;
 import redis.clients.jedis.util.Pool;
 
+import java.io.Serializable;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public class RedisClientImpl extends RedisClient {
 
     private final Pool<Jedis> jedisPool;
@@ -44,7 +48,7 @@ public class RedisClientImpl extends RedisClient {
     }
 
     @Override
-    public <K> K execute(RedisCommand<K> command) throws CacheException {
+    public <K extends Serializable> K execute(RedisCommand<K> command) throws CacheException {
         int tries = 0;
         boolean retry = true;
         K value = null;
@@ -82,7 +86,7 @@ public class RedisClientImpl extends RedisClient {
     }
 
     @Override
-    public <K> K execute(RedisClusterCommand<K> clusterCommand) throws CacheException {
+    public <K extends Serializable> K execute(RedisClusterCommand<K> clusterCommand) throws CacheException {
         int tries = 0;
         boolean retry = true;
         K value = null;
@@ -120,7 +124,7 @@ public class RedisClientImpl extends RedisClient {
     }
 
     @Override
-    public <K> K execute(RedisCommand<K> command, RedisClusterCommand<K> clusterCommand) throws CacheException {
+    public <K extends Serializable> K execute(RedisCommand<K> command, RedisClusterCommand<K> clusterCommand) throws CacheException {
         switch (config.getConfigType()) {
             case CLUSTER:
                 return execute(clusterCommand);

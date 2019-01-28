@@ -12,6 +12,9 @@ import messaging.client.config.MessageClientConfig;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 abstract class MessageHandler {
 
     static final String EXCHANGE_NAME = "amq.direct";
@@ -43,5 +46,4 @@ abstract class MessageHandler {
     Connection getConnection() throws IOException, TimeoutException {
         return connectionFactory().newConnection();
     }
-
 }

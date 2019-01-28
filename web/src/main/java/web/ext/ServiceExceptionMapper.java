@@ -8,6 +8,9 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Provider
 public class ServiceExceptionMapper implements ExceptionMapper<ServiceException> {
 

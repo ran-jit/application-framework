@@ -15,6 +15,9 @@ import javax.persistence.Version;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Setter
 @MappedSuperclass
@@ -46,5 +49,4 @@ public abstract class AbstractEntity<ID extends Serializable> {
     protected void onUpdate() {
         this.lastModifiedOn = LocalDateTime.now();
     }
-
 }

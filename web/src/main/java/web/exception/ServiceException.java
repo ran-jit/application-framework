@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import web.status.StatusCode;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @Getter
 @Setter
 public class ServiceException extends Exception {

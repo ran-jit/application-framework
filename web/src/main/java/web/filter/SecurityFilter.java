@@ -14,6 +14,9 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.Set;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 public abstract class SecurityFilter implements ContainerRequestFilter {
 
     private final Set<String> byPassURIs;

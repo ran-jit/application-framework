@@ -9,6 +9,9 @@ import org.hibernate.SessionFactory;
 
 import java.util.Map;
 
+/**
+ * author: Ranjith Manickam @ 28 Jan' 2019.
+ */
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 public abstract class DatabaseManager {
 
@@ -26,5 +29,4 @@ public abstract class DatabaseManager {
     static SessionFactory getSessionFactory(DatabaseConfig databaseInfo) {
         return SESSION_FACTORY_MAP.get(databaseInfo);
     }
-
 }
