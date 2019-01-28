@@ -1,11 +1,11 @@
 package auth.cache;
 
+import auth.model.AuthenticationInfo;
 import cache.client.RedisClient;
 import cache.client.RedisClientImpl;
 import cache.config.CacheConfig;
 import cache.exception.CacheException;
 import com.google.inject.Inject;
-import web.auth.AuthenticationInfo;
 
 /**
  * author: Ranjith Manickam @ 28 Jan' 2019.

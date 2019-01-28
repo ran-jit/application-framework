@@ -1,8 +1,8 @@
 package auth.utils;
 
 import auth.cache.AuthCache;
+import auth.model.AuthenticationInfo;
 import com.google.inject.Inject;
-import web.auth.AuthenticationInfo;
 import web.exception.AuthenticationException;
 
 import static web.exception.AuthenticationException.AuthenticationFailiureStatus.INVALID_ACCESS_TOKEN;

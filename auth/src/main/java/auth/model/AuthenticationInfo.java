@@ -1,4 +1,4 @@
-package web.auth;
+package auth.model;
 
 import lombok.Builder;
 import lombok.Getter;
