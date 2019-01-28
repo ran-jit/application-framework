@@ -10,7 +10,8 @@ public class RequestContext {
     }
 
     public static RequestInfo get() {
-        return REQUEST_CONTEXT.get();
+        RequestInfo requestInfo = REQUEST_CONTEXT.get();
+        return requestInfo == null ? RequestInfo.builder().build() : requestInfo;
     }
 
     public static void remove() {

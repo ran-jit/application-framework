@@ -2,10 +2,12 @@ package web.request;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 import web.auth.AuthenticationInfo;
 
 @Getter
+@Setter
 @Builder
 @ToString
 public class RequestInfo extends AbstractRequest {
