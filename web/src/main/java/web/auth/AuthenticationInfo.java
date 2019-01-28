@@ -22,6 +22,6 @@ public class AuthenticationInfo implements Serializable {
     private Long userId;
 
     public enum Scheme {
-        BASIC, BEARER;
+        BEARER;
     }
 }

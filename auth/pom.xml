@@ -12,7 +12,6 @@
     <artifactId>auth</artifactId>
 
     <properties>
-        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <guice.version>4.2.2</guice.version>
 
         <application-framework-web.version>1.0-SNAPSHOT</application-framework-web.version>
@@ -20,13 +19,6 @@
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${javax.servlet-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
         <dependency>
             <groupId>com.google.inject</groupId>

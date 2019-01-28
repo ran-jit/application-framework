@@ -17,15 +17,15 @@ import java.util.Set;
 /**
  * author: Ranjith Manickam @ 28 Jan' 2019.
  */
-public abstract class SecurityFilter implements ContainerRequestFilter {
+public abstract class BearerTokenFilter implements ContainerRequestFilter {
 
     private final Set<String> byPassURIs;
 
-    public SecurityFilter() {
+    public BearerTokenFilter() {
         this(null);
     }
 
-    public SecurityFilter(Set<String> byPassURIs) {
+    public BearerTokenFilter(Set<String> byPassURIs) {
         this.byPassURIs = (byPassURIs == null) ? Sets.newHashSet() : byPassURIs;
     }
 
