@@ -1,4 +1,4 @@
-package auth.model;
+package identity.model;
 
 import com.google.common.collect.Sets;
 import lombok.Builder;
@@ -13,6 +13,8 @@ import java.util.Set;
 @Getter
 @Builder
 public class FilterURIs implements Serializable {
+    private static final long serialVersionUID = -6811914990371963127L;
+
     private Set<String> byPassURIs;
 
     public Set<String> getByPassURIs() {

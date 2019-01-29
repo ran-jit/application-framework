@@ -14,7 +14,7 @@
         <module>cache</module>
         <module>messaging</module>
         <module>web</module>
-        <module>auth</module>
+        <module>identity</module>
     </modules>
 
     <properties>

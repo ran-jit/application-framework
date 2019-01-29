@@ -1,4 +1,4 @@
-package web.request;
+package web.model;
 
 import java.io.Serializable;
 

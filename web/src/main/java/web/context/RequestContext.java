@@ -1,6 +1,6 @@
 package web.context;
 
-import web.request.RequestInfo;
+import web.model.RequestInfo;
 
 /**
  * author: Ranjith Manickam @ 28 Jan' 2019.

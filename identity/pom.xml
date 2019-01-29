@@ -9,12 +9,13 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>auth</artifactId>
+    <artifactId>identity</artifactId>
 
     <properties>
         <guice.version>4.2.2</guice.version>
 
         <application-framework-web.version>1.0-SNAPSHOT</application-framework-web.version>
+        <application-framework-data.version>1.0-SNAPSHOT</application-framework-data.version>
         <application-framework-cache.version>1.0-SNAPSHOT</application-framework-cache.version>
     </properties>
 
@@ -30,6 +31,11 @@
             <groupId>application-framework</groupId>
             <artifactId>web</artifactId>
             <version>${application-framework-web.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>application-framework</groupId>
+            <artifactId>data</artifactId>
+            <version>${application-framework-data.version}</version>
         </dependency>
         <dependency>
             <groupId>application-framework</groupId>

@@ -1,6 +1,6 @@
-package auth.cache;
+package identity.cache;
 
-import auth.model.AuthenticationInfo;
+import identity.model.AuthenticationInfo;
 import cache.client.RedisClient;
 import cache.client.RedisClientImpl;
 import cache.config.CacheConfig;

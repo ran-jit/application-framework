@@ -1,7 +1,7 @@
-package auth.utils;
+package identity.utils;
 
-import auth.cache.AuthCache;
-import auth.model.AuthenticationInfo;
+import identity.cache.AuthCache;
+import identity.model.AuthenticationInfo;
 import com.google.inject.Inject;
 import web.exception.AuthenticationException;
 
@@ -24,7 +24,7 @@ public class AuthorizationUtil {
         if (values.length == 2) {
             AuthenticationInfo authenticationInfo;
             try {
-                AuthenticationInfo.Scheme.valueOf(values[0].toUpperCase());
+                AuthenticationInfo.Type.valueOf(values[0].toUpperCase());
                 authenticationInfo = this.authCache.get(values[1]);
             } catch (Exception ex) {
                 throw new AuthenticationException(INVALID_ACCESS_TOKEN);

@@ -8,6 +8,6 @@ import java.io.Serializable;
 /**
  * author: Ranjith Manickam @ 28 Jan' 2019.
  */
-public interface RedisCommand<T extends Serializable> {
-    T execute(Jedis jedis) throws CacheException;
+public interface RedisCommand<V extends Serializable> {
+    V execute(Jedis jedis) throws CacheException;
 }

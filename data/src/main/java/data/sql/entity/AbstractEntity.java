@@ -22,7 +22,8 @@ import java.time.LocalDateTime;
 @Setter
 @MappedSuperclass
 @EqualsAndHashCode(of = {"id"})
-public abstract class AbstractEntity<ID extends Serializable> {
+public abstract class AbstractEntity<ID extends Serializable> implements Serializable {
+    private static final long serialVersionUID = -6700815066911523333L;
 
     @Id
     @Column(name = "id", updatable = false, insertable = false)

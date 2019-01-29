@@ -48,10 +48,10 @@ public class RedisClientImpl extends RedisClient {
     }
 
     @Override
-    public <K extends Serializable> K execute(RedisCommand<K> command) throws CacheException {
+    public <V extends Serializable> V execute(RedisCommand<V> command) throws CacheException {
         int tries = 0;
         boolean retry = true;
-        K value = null;
+        V value = null;
         do {
             tries++;
             try (Jedis jedis = this.jedisPool.getResource()) {
@@ -86,10 +86,10 @@ public class RedisClientImpl extends RedisClient {
     }
 
     @Override
-    public <K extends Serializable> K execute(RedisClusterCommand<K> clusterCommand) throws CacheException {
+    public <V extends Serializable> V execute(RedisClusterCommand<V> clusterCommand) throws CacheException {
         int tries = 0;
         boolean retry = true;
-        K value = null;
+        V value = null;
         do {
             tries++;
             try {
@@ -124,7 +124,7 @@ public class RedisClientImpl extends RedisClient {
     }
 
     @Override
-    public <K extends Serializable> K execute(RedisCommand<K> command, RedisClusterCommand<K> clusterCommand) throws CacheException {
+    public <V extends Serializable> V execute(RedisCommand<V> command, RedisClusterCommand<V> clusterCommand) throws CacheException {
         switch (config.getConfigType()) {
             case CLUSTER:
                 return execute(clusterCommand);

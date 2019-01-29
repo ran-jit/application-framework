@@ -1,4 +1,4 @@
-package auth.model;
+package identity.model;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -17,11 +17,12 @@ public class AuthenticationInfo implements Serializable {
 
     private String accessToken;
     private String refreshToken;
-    private Scheme scheme;
+    private Long expiresIn;
+    private Type type;
 
     private Long userId;
 
-    public enum Scheme {
+    public enum Type {
         BEARER;
     }
 }

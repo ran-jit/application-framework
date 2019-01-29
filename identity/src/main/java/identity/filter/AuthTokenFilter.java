@@ -1,8 +1,8 @@
-package auth.filter;
+package identity.filter;
 
-import auth.model.AuthenticationInfo;
-import auth.model.FilterURIs;
-import auth.utils.AuthorizationUtil;
+import identity.model.AuthenticationInfo;
+import identity.model.FilterURIs;
+import identity.utils.AuthorizationUtil;
 import com.google.inject.Inject;
 import web.context.RequestContext;
 import web.exception.AuthenticationException;
