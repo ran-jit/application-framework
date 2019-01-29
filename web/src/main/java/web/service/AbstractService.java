@@ -1,5 +1,9 @@
 package web.service;
 
+import web.status.Status;
+
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,5 +20,20 @@ public abstract class AbstractService {
 
     protected void logException(String message, Object... objects) {
         this.logger.log(Level.SEVERE, message, objects);
+    }
+
+    protected Response sendResponse(Object data) {
+        web.response.Response response = web.response.Response.builder()
+                .status(Status.builder()
+                        .success(Boolean.TRUE)
+                        .type(Status.Type.SUCCESS)
+                        .build())
+                .data(data)
+                .build();
+
+        return Response.status(Response.Status.OK)
+                .entity(response)
+                .type(MediaType.APPLICATION_JSON)
+                .build();
     }
 }
