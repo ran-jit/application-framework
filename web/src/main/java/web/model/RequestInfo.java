@@ -12,7 +12,7 @@ import lombok.ToString;
 @Setter
 @Builder
 @ToString
-public class RequestInfo extends AbstractRequest {
+public class RequestInfo extends AbstractEntry {
     private static final long serialVersionUID = -3965961885659864153L;
 
     private String requestId;
